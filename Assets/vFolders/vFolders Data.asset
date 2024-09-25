@@ -23,6 +23,7 @@ MonoBehaviour:
     - a8e1dcc6f996c524d9a0dbdad5be7689
     - b635102e95b7cf54e919a0abc9a91f63
     - ba500fccb8b80524eb5cdc77615dbfd7
+    - c469dd06f4c7b2544b98af9553b8509d
     values:
     - colorIndex: 1
       iconNameOrGuid: 
@@ -42,3 +43,5 @@ MonoBehaviour:
       iconNameOrGuid: 
     - colorIndex: 10
       iconNameOrGuid: 
+    - colorIndex: 8
+      iconNameOrGuid: ScriptableObject Icon

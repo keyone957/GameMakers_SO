@@ -2276,10 +2276,10 @@ RectTransform:
   - {fileID: 144785799}
   m_Father: {fileID: 785562609}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 180, y: -200}
-  m_SizeDelta: {x: 300, y: 300}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &201504151
 MonoBehaviour:
@@ -2341,6 +2341,7 @@ MonoBehaviour:
   popupText: {fileID: 179303798}
   mode: equip
   tokenMode: sword
+  colorSo: {fileID: 0}
 --- !u!1 &211114201
 GameObject:
   m_ObjectHideFlags: 0
@@ -2651,6 +2652,7 @@ MonoBehaviour:
   popupText: {fileID: 179303798}
   mode: equip
   tokenMode: color
+  colorSo: {fileID: 0}
 --- !u!1 &221753249
 GameObject:
   m_ObjectHideFlags: 0
@@ -3377,7 +3379,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &319950106
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3749,7 +3751,7 @@ GameObject:
   - component: {fileID: 364221006}
   - component: {fileID: 364221005}
   m_Layer: 5
-  m_Name: c2
+  m_Name: c3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3799,6 +3801,7 @@ MonoBehaviour:
   popupText: {fileID: 179303798}
   mode: buy
   tokenMode: color
+  colorSo: {fileID: 0}
 --- !u!114 &364221006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5801,10 +5804,10 @@ RectTransform:
   - {fileID: 1282616062}
   m_Father: {fileID: 785562609}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1200, y: -530}
-  m_SizeDelta: {x: 300, y: 300}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &627955168
 MonoBehaviour:
@@ -5828,6 +5831,7 @@ MonoBehaviour:
   popupText: {fileID: 179303798}
   mode: buy
   tokenMode: sword
+  colorSo: {fileID: 0}
 --- !u!114 &627955169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6037,7 +6041,7 @@ GameObject:
   - component: {fileID: 652571825}
   - component: {fileID: 652571824}
   m_Layer: 5
-  m_Name: c3
+  m_Name: c4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6087,6 +6091,7 @@ MonoBehaviour:
   popupText: {fileID: 179303798}
   mode: buy
   tokenMode: color
+  colorSo: {fileID: 0}
 --- !u!114 &652571825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6392,7 +6397,7 @@ GameObject:
   - component: {fileID: 706375558}
   - component: {fileID: 706375557}
   m_Layer: 5
-  m_Name: c5
+  m_Name: c1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6442,6 +6447,7 @@ MonoBehaviour:
   popupText: {fileID: 179303798}
   mode: buy
   tokenMode: color
+  colorSo: {fileID: 0}
 --- !u!114 &706375558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7406,7 +7412,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &785562609
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7955,10 +7961,10 @@ RectTransform:
   - {fileID: 1887899707}
   m_Father: {fileID: 785562609}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 180, y: -530}
-  m_SizeDelta: {x: 300, y: 300}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &852206291
 MonoBehaviour:
@@ -7982,6 +7988,7 @@ MonoBehaviour:
   popupText: {fileID: 179303798}
   mode: buy
   tokenMode: sword
+  colorSo: {fileID: 0}
 --- !u!114 &852206292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9249,10 +9256,10 @@ RectTransform:
   - {fileID: 1725484287}
   m_Father: {fileID: 785562609}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1200, y: -200}
-  m_SizeDelta: {x: 300, y: 300}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &944789344
 MonoBehaviour:
@@ -9276,6 +9283,7 @@ MonoBehaviour:
   popupText: {fileID: 179303798}
   mode: buy
   tokenMode: sword
+  colorSo: {fileID: 0}
 --- !u!114 &944789345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10914,10 +10922,10 @@ RectTransform:
   - {fileID: 889031750}
   m_Father: {fileID: 785562609}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 520, y: -200}
-  m_SizeDelta: {x: 300, y: 300}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1087198545
 MonoBehaviour:
@@ -10941,6 +10949,7 @@ MonoBehaviour:
   popupText: {fileID: 179303798}
   mode: buy
   tokenMode: sword
+  colorSo: {fileID: 0}
 --- !u!114 &1087198546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11480,10 +11489,10 @@ RectTransform:
   - {fileID: 89165884}
   m_Father: {fileID: 785562609}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 520, y: -530}
-  m_SizeDelta: {x: 300, y: 300}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1119496416
 MonoBehaviour:
@@ -11507,6 +11516,7 @@ MonoBehaviour:
   popupText: {fileID: 179303798}
   mode: buy
   tokenMode: sword
+  colorSo: {fileID: 0}
 --- !u!114 &1119496417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15062,10 +15072,10 @@ RectTransform:
   - {fileID: 512871073}
   m_Father: {fileID: 785562609}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 860, y: -200}
-  m_SizeDelta: {x: 300, y: 300}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1638676646
 MonoBehaviour:
@@ -15089,6 +15099,7 @@ MonoBehaviour:
   popupText: {fileID: 179303798}
   mode: buy
   tokenMode: sword
+  colorSo: {fileID: 0}
 --- !u!114 &1638676647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15749,10 +15760,10 @@ RectTransform:
   - {fileID: 87997575}
   m_Father: {fileID: 785562609}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 860, y: -530}
-  m_SizeDelta: {x: 300, y: 300}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1698952830
 MonoBehaviour:
@@ -15776,6 +15787,7 @@ MonoBehaviour:
   popupText: {fileID: 179303798}
   mode: buy
   tokenMode: sword
+  colorSo: {fileID: 0}
 --- !u!114 &1698952831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17354,7 +17366,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1821791033
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19576,7 +19588,7 @@ GameObject:
   - component: {fileID: 2016941810}
   - component: {fileID: 2016941809}
   m_Layer: 5
-  m_Name: c4
+  m_Name: c5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19626,6 +19638,7 @@ MonoBehaviour:
   popupText: {fileID: 179303798}
   mode: buy
   tokenMode: color
+  colorSo: {fileID: 0}
 --- !u!114 &2016941810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20295,7 +20308,7 @@ GameObject:
   - component: {fileID: 2129439347}
   - component: {fileID: 2129439346}
   m_Layer: 5
-  m_Name: c1
+  m_Name: c2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20345,6 +20358,7 @@ MonoBehaviour:
   popupText: {fileID: 179303798}
   mode: buy
   tokenMode: color
+  colorSo: {fileID: 0}
 --- !u!114 &2129439347
 MonoBehaviour:
   m_ObjectHideFlags: 0

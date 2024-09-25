@@ -23,7 +23,7 @@ public class ShopColorToken : MonoBehaviour
     private bool isBuy;//샀는지?
     [SerializeField] private string mode;//샀으면 버튼 모드
     [SerializeField] private string tokenMode;
-    
+    [SerializeField] private ShopTokenSO tokenSO;
     private void Start()
     {
         buyBtn.onClick.AddListener(OnClickBuyBtn);
@@ -39,6 +39,11 @@ public class ShopColorToken : MonoBehaviour
         }
 
         BtnMode(mode);
+    }
+
+    private void InitToken()
+    {
+        
     }
 
     private void OnClickBuyBtn()
