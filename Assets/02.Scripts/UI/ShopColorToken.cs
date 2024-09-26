@@ -12,8 +12,9 @@ using UnityEngine.UI;
 // 최종 수정일 : 2024-06-04
 public class ShopColorToken : MonoBehaviour
 {
+    private int price;//가격
+    private int swordDamage;
     [SerializeField] private Image tokenSlime;//바꿀 슬라임 컬러
-    [SerializeField] private int price;//가격
     [SerializeField] private TMP_Text priceText;// 가격 문자열
     [SerializeField] private Button buyBtn;//구매버튼
     [SerializeField] private TMP_Text buyBtnText;
@@ -28,7 +29,7 @@ public class ShopColorToken : MonoBehaviour
     {
         buyBtn.onClick.AddListener(OnClickBuyBtn);
         popupBtn.onClick.AddListener(()=>shopPopup.SetActive(false));
-        priceText.text = price.ToString();
+        InitToken();
         if (PlayerPrefs.HasKey(gameObject.name.ToString()))
         {
             mode = PlayerPrefs.GetString(gameObject.name.ToString());
@@ -43,7 +44,18 @@ public class ShopColorToken : MonoBehaviour
 
     private void InitToken()
     {
-        
+        tokenMode = tokenSO.mode;
+        price = tokenSO.price;
+        priceText.text = tokenSO.price.ToString();
+        if (tokenMode == "color")
+        {
+            tokenSlime.color = tokenSO.slimeColor;
+        }
+        else if (tokenMode == "sword")
+        {
+            tokenSlime.sprite = tokenSO.swordImage;
+            swordDamage = tokenSO.damage;
+        }
     }
 
     private void OnClickBuyBtn()

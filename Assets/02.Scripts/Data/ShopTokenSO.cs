@@ -11,7 +11,7 @@ public class ShopTokenSO : ScriptableObject
     public int price;
 
     [Header("Color 모드 정보")]
-    public Color32 slimeColor;
+    public Color slimeColor;
 
     [Header("Sword 모드 정보")]
     public Sprite swordImage;

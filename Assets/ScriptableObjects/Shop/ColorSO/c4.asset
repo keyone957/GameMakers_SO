@@ -14,8 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mode: color
   price: 2000
-  slimeColor:
-    serializedVersion: 2
-    rgba: 15794431
+  slimeColor: {r: 1, g: 0, b: 0.94509804, a: 1}
   swordImage: {fileID: 0}
   damage: 0

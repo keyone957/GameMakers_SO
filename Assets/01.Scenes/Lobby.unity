@@ -2276,10 +2276,10 @@ RectTransform:
   - {fileID: 144785799}
   m_Father: {fileID: 785562609}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 180, y: -200}
+  m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &201504151
 MonoBehaviour:
@@ -2332,7 +2332,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tokenSlime: {fileID: 1738648350}
-  price: 0
   priceText: {fileID: 77458088}
   buyBtn: {fileID: 144785800}
   buyBtnText: {fileID: 131474193}
@@ -2341,7 +2340,7 @@ MonoBehaviour:
   popupText: {fileID: 179303798}
   mode: equip
   tokenMode: sword
-  colorSo: {fileID: 0}
+  tokenSO: {fileID: 11400000, guid: fff9b30dc90bf3546b8baf8f0eaa774d, type: 2}
 --- !u!1 &211114201
 GameObject:
   m_ObjectHideFlags: 0
@@ -2643,7 +2642,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tokenSlime: {fileID: 59748313}
-  price: 0
   priceText: {fileID: 1630367575}
   buyBtn: {fileID: 1849294662}
   buyBtnText: {fileID: 110925863}
@@ -2652,7 +2650,7 @@ MonoBehaviour:
   popupText: {fileID: 179303798}
   mode: equip
   tokenMode: color
-  colorSo: {fileID: 0}
+  tokenSO: {fileID: 11400000, guid: 89beab73e23e6e249ac15a3dee78bc4a, type: 2}
 --- !u!1 &221753249
 GameObject:
   m_ObjectHideFlags: 0
@@ -3379,7 +3377,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &319950106
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3792,7 +3790,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tokenSlime: {fileID: 54045455}
-  price: 1500
   priceText: {fileID: 1338718725}
   buyBtn: {fileID: 1168543022}
   buyBtnText: {fileID: 125237462}
@@ -3801,7 +3798,7 @@ MonoBehaviour:
   popupText: {fileID: 179303798}
   mode: buy
   tokenMode: color
-  colorSo: {fileID: 0}
+  tokenSO: {fileID: 11400000, guid: 53492155735b6584cb6cb43528134a32, type: 2}
 --- !u!114 &364221006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5804,10 +5801,10 @@ RectTransform:
   - {fileID: 1282616062}
   m_Father: {fileID: 785562609}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1200, y: -530}
+  m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &627955168
 MonoBehaviour:
@@ -5822,7 +5819,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tokenSlime: {fileID: 1789415795}
-  price: 5000
   priceText: {fileID: 1700092907}
   buyBtn: {fileID: 1282616063}
   buyBtnText: {fileID: 1578657374}
@@ -5831,7 +5827,7 @@ MonoBehaviour:
   popupText: {fileID: 179303798}
   mode: buy
   tokenMode: sword
-  colorSo: {fileID: 0}
+  tokenSO: {fileID: 11400000, guid: bade26b824e29ba46bd34b10be5b1156, type: 2}
 --- !u!114 &627955169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6082,7 +6078,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tokenSlime: {fileID: 14762181}
-  price: 2000
   priceText: {fileID: 735166073}
   buyBtn: {fileID: 1820110770}
   buyBtnText: {fileID: 994327093}
@@ -6091,7 +6086,7 @@ MonoBehaviour:
   popupText: {fileID: 179303798}
   mode: buy
   tokenMode: color
-  colorSo: {fileID: 0}
+  tokenSO: {fileID: 11400000, guid: 7b2719533d8ba7c4cac5c32c617adb01, type: 2}
 --- !u!114 &652571825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6438,7 +6433,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tokenSlime: {fileID: 1990670220}
-  price: 1500
   priceText: {fileID: 736032764}
   buyBtn: {fileID: 112484908}
   buyBtnText: {fileID: 1546830543}
@@ -6447,7 +6441,7 @@ MonoBehaviour:
   popupText: {fileID: 179303798}
   mode: buy
   tokenMode: color
-  colorSo: {fileID: 0}
+  tokenSO: {fileID: 11400000, guid: 0450719c5a42867458193a494eaebfcd, type: 2}
 --- !u!114 &706375558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7412,7 +7406,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &785562609
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7559,7 +7553,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 131449278, guid: 6eb16e372762d6b4cb708c44ebfab931, type: 3}
+  m_Sprite: {fileID: -267587109, guid: 6eb16e372762d6b4cb708c44ebfab931, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7961,10 +7955,10 @@ RectTransform:
   - {fileID: 1887899707}
   m_Father: {fileID: 785562609}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 180, y: -530}
+  m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &852206291
 MonoBehaviour:
@@ -7979,7 +7973,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tokenSlime: {fileID: 935027676}
-  price: 2500
   priceText: {fileID: 534987472}
   buyBtn: {fileID: 1887899708}
   buyBtnText: {fileID: 1152116532}
@@ -7988,7 +7981,7 @@ MonoBehaviour:
   popupText: {fileID: 179303798}
   mode: buy
   tokenMode: sword
-  colorSo: {fileID: 0}
+  tokenSO: {fileID: 11400000, guid: 4ee2dbed8fd1944429002a7aba6d4c4b, type: 2}
 --- !u!114 &852206292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8721,7 +8714,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 607831742, guid: 6eb16e372762d6b4cb708c44ebfab931, type: 3}
+  m_Sprite: {fileID: -267587109, guid: 6eb16e372762d6b4cb708c44ebfab931, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9256,10 +9249,10 @@ RectTransform:
   - {fileID: 1725484287}
   m_Father: {fileID: 785562609}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1200, y: -200}
+  m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &944789344
 MonoBehaviour:
@@ -9274,7 +9267,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tokenSlime: {fileID: 1014453564}
-  price: 2000
   priceText: {fileID: 177325646}
   buyBtn: {fileID: 1725484288}
   buyBtnText: {fileID: 875148161}
@@ -9283,7 +9275,7 @@ MonoBehaviour:
   popupText: {fileID: 179303798}
   mode: buy
   tokenMode: sword
-  colorSo: {fileID: 0}
+  tokenSO: {fileID: 11400000, guid: 244e718554bf17d498fc0b7def91f7dd, type: 2}
 --- !u!114 &944789345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9930,7 +9922,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -460413151, guid: 6eb16e372762d6b4cb708c44ebfab931, type: 3}
+  m_Sprite: {fileID: -267587109, guid: 6eb16e372762d6b4cb708c44ebfab931, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10922,10 +10914,10 @@ RectTransform:
   - {fileID: 889031750}
   m_Father: {fileID: 785562609}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 520, y: -200}
+  m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1087198545
 MonoBehaviour:
@@ -10940,7 +10932,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tokenSlime: {fileID: 789992278}
-  price: 1000
   priceText: {fileID: 1024083920}
   buyBtn: {fileID: 889031751}
   buyBtnText: {fileID: 230225946}
@@ -10949,7 +10940,7 @@ MonoBehaviour:
   popupText: {fileID: 179303798}
   mode: buy
   tokenMode: sword
-  colorSo: {fileID: 0}
+  tokenSO: {fileID: 11400000, guid: f0d1c6574b5708b47b79441d75b49241, type: 2}
 --- !u!114 &1087198546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11489,10 +11480,10 @@ RectTransform:
   - {fileID: 89165884}
   m_Father: {fileID: 785562609}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 520, y: -530}
+  m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1119496416
 MonoBehaviour:
@@ -11507,7 +11498,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tokenSlime: {fileID: 44142266}
-  price: 3000
   priceText: {fileID: 1282512225}
   buyBtn: {fileID: 89165885}
   buyBtnText: {fileID: 1859878023}
@@ -11516,7 +11506,7 @@ MonoBehaviour:
   popupText: {fileID: 179303798}
   mode: buy
   tokenMode: sword
-  colorSo: {fileID: 0}
+  tokenSO: {fileID: 11400000, guid: 50efc8091559a734abdeafac5c7ff7e2, type: 2}
 --- !u!114 &1119496417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15072,10 +15062,10 @@ RectTransform:
   - {fileID: 512871073}
   m_Father: {fileID: 785562609}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 860, y: -200}
+  m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1638676646
 MonoBehaviour:
@@ -15090,7 +15080,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tokenSlime: {fileID: 891788089}
-  price: 1500
   priceText: {fileID: 415863503}
   buyBtn: {fileID: 512871074}
   buyBtnText: {fileID: 1149795499}
@@ -15099,7 +15088,7 @@ MonoBehaviour:
   popupText: {fileID: 179303798}
   mode: buy
   tokenMode: sword
-  colorSo: {fileID: 0}
+  tokenSO: {fileID: 11400000, guid: f3a79924793b6e540a7439191e225a4a, type: 2}
 --- !u!114 &1638676647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15760,10 +15749,10 @@ RectTransform:
   - {fileID: 87997575}
   m_Father: {fileID: 785562609}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 860, y: -530}
+  m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1698952830
 MonoBehaviour:
@@ -15778,7 +15767,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tokenSlime: {fileID: 1657107877}
-  price: 3500
   priceText: {fileID: 766854795}
   buyBtn: {fileID: 87997576}
   buyBtnText: {fileID: 2005952203}
@@ -15787,7 +15775,7 @@ MonoBehaviour:
   popupText: {fileID: 179303798}
   mode: buy
   tokenMode: sword
-  colorSo: {fileID: 0}
+  tokenSO: {fileID: 11400000, guid: 81d845f368a9e174e9464f3fc4cee0aa, type: 2}
 --- !u!114 &1698952831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17366,7 +17354,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1821791033
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19329,6 +19317,255 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1990670218}
   m_CullTransparentMesh: 1
+--- !u!1 &1991025469
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1991025474}
+  - component: {fileID: 1991025473}
+  - component: {fileID: 1991025472}
+  - component: {fileID: 1991025471}
+  - component: {fileID: 1991025470}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1991025470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991025469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 158e635a662c50544814e036d0cddb7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bgmSource: {fileID: 1991025472}
+  _soundSource: {fileID: 1991025471}
+--- !u!82 &1991025471
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991025469}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &1991025472
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991025469}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!81 &1991025473
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991025469}
+  m_Enabled: 1
+--- !u!4 &1991025474
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991025469}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2005952201
 GameObject:
   m_ObjectHideFlags: 0
@@ -19629,7 +19866,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tokenSlime: {fileID: 996120240}
-  price: 3000
   priceText: {fileID: 612170523}
   buyBtn: {fileID: 896330966}
   buyBtnText: {fileID: 1116780981}
@@ -19638,7 +19874,7 @@ MonoBehaviour:
   popupText: {fileID: 179303798}
   mode: buy
   tokenMode: color
-  colorSo: {fileID: 0}
+  tokenSO: {fileID: 11400000, guid: 2bf069bad693ec442a1f6d276bca74d3, type: 2}
 --- !u!114 &2016941810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20349,7 +20585,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tokenSlime: {fileID: 1526407350}
-  price: 1500
   priceText: {fileID: 870513195}
   buyBtn: {fileID: 1186084152}
   buyBtnText: {fileID: 784139346}
@@ -20358,7 +20593,7 @@ MonoBehaviour:
   popupText: {fileID: 179303798}
   mode: buy
   tokenMode: color
-  colorSo: {fileID: 0}
+  tokenSO: {fileID: 11400000, guid: 683c95e034a570940a28845b365e03b9, type: 2}
 --- !u!114 &2129439347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24161,3 +24396,4 @@ SceneRoots:
   - {fileID: 906545468}
   - {fileID: 295790752}
   - {fileID: 1067648005}
+  - {fileID: 1991025474}
