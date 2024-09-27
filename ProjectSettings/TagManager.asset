@@ -12,6 +12,7 @@ TagManager:
   - MonsterAttackCol
   - PlayerSword
   - Bullet
+  - ShootingObj
   layers:
   - Default
   - TransparentFX

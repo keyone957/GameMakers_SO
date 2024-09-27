@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -167,6 +168,17 @@ public class Monster : MonoBehaviour
         {
             OnDamaged();
             Debug.Log("해골 아파용");
+        }
+
+        if (other.gameObject.CompareTag("ShootingObj"))
+        {
+            curHp -= other.gameObject.GetComponent<ShootingSkill>().damage;
+            monsterHpBarSlider.value = (float)curHp / hp;
+            if (curHp <= 0)
+            {
+                state = State.DIE;
+            }
+            Destroy(other.gameObject);
         }
     }
 

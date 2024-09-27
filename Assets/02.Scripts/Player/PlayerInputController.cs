@@ -23,11 +23,15 @@ public class PlayerInputController : MonoBehaviour
     [SerializeField] public bool canDivide; //점프맵에서 혹여나 분열을 안쓸수도 있으니 필요한 bool값
     [SerializeField] private SpriteRenderer slimeSpr;
     [SerializeField] private SpriteRenderer divideSlimeSpr;
+    [SerializeField] public PlayerSkillSO playerSkillSO;
     private bool isDivide;
     private int jumpCnt;
     private float divideCooldown = 2f; //분열 스킬 쿨타임
     private float nextDivideTime = 0f;
-    
+
+    private delegate void InputAction();
+
+    private InputAction onPressSkillKey;
 
     private bool isInvincible = false; //무적상태 bool값
 
@@ -35,6 +39,25 @@ public class PlayerInputController : MonoBehaviour
     private readonly int hashIdle = Animator.StringToHash("IsIdle");
     private readonly int hashMove = Animator.StringToHash("IsMove");
     private readonly int hashAttack = Animator.StringToHash("IsAttack");
+    public float nextSkillTime = 0f; 
+
+    private void Start()
+    {
+        onPressSkillKey += UseSkill;
+    }
+
+    private void UseSkill()
+    {
+        if (Time.time >= nextSkillTime)
+        {
+            playerSkillSO.DOSkill();
+            nextSkillTime = Time.time + playerSkillSO.coolDown; // 스킬 쿨타임 설정
+        }
+        else
+        {
+            Debug.Log("스킬이 쿨타임 중입니다.");
+        }
+    }
 
     private void Update()
     {
@@ -63,6 +86,11 @@ public class PlayerInputController : MonoBehaviour
                 ResetSlime();
                 nextDivideTime = Time.time + divideCooldown;
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            onPressSkillKey?.Invoke();
         }
     }
 
