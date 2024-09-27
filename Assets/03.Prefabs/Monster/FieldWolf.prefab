@@ -348,6 +348,7 @@ GameObject:
   - component: {fileID: 6029419460035537660}
   - component: {fileID: 7937193316894657714}
   - component: {fileID: 8245305837293033538}
+  - component: {fileID: 8317344052505399909}
   m_Layer: 7
   m_Name: FieldWolf
   m_TagString: Monster
@@ -538,9 +539,38 @@ MonoBehaviour:
   hpCanvas: {fileID: 2456111356900563819}
   monsterHpBarSlider: {fileID: 6453802814196227539}
   monsterType: 0
+  m_fullAttacked: {fileID: 0}
   state: 0
   isDie: 0
   playerTrans: {fileID: 0}
+--- !u!114 &8317344052505399909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5709910184101655306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 070a96c38a4794c41a6a2b6e8c0a855d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EventChannel: {fileID: 11400000, guid: f2ddde1dc2fe3cd41b50d4db75bef4c8, type: 2}
+  m_Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8245305837293033538}
+        m_TargetAssemblyTypeName: Monster, Assembly-CSharp
+        m_MethodName: FullDamaged
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6151222450441935503
 GameObject:
   m_ObjectHideFlags: 0

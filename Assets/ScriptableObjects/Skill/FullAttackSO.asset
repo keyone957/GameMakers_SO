@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 434ad5dba2be8ba40bce4c00c2801854, type: 3}
-  m_Name: HealSkillSO
+  m_Script: {fileID: 11500000, guid: 61738d8305fb3104b98bdb92b2a600ff, type: 3}
+  m_Name: FullAttackSO
   m_EditorClassIdentifier: 
-  coolDown: 8
-  skillPrefab: {fileID: 7364588362933976966, guid: 8c17c0d9a96f3624b90bddc31a294441, type: 3}
+  coolDown: 10
+  skillPrefab: {fileID: 1707406610436744, guid: 714228ad5e9990742957d6c7445e9116, type: 3}
+  m_fullAttackSO: {fileID: 11400000, guid: f2ddde1dc2fe3cd41b50d4db75bef4c8, type: 2}

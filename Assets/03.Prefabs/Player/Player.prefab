@@ -213,6 +213,7 @@ MonoBehaviour:
   slimeSpr: {fileID: 7965328832732509620}
   divideSlimeSpr: {fileID: 0}
   playerSkillSO: {fileID: 11400000, guid: 317cfca6162997c438d82945d4b3cd4a, type: 2}
+  nextSkillTime: 0
 --- !u!251 &7745706743936173932
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -248,6 +249,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 317cfca6162997c438d82945d4b3cd4a, type: 2}
   - {fileID: 11400000, guid: 2c45047fc007fe54eb8abb740a57082f, type: 2}
   - {fileID: 11400000, guid: 58a8ed8409457ad4892701b668195264, type: 2}
+  fullAttckEvent: {fileID: 11400000, guid: f2ddde1dc2fe3cd41b50d4db75bef4c8, type: 2}
 --- !u!1 &2252008722272826871
 GameObject:
   m_ObjectHideFlags: 0

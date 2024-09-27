@@ -37,6 +37,7 @@ public class Monster : MonoBehaviour
     [SerializeField] private GameObject hpCanvas;
     [SerializeField] public Slider monsterHpBarSlider;
     [SerializeField] public MonsterType monsterType;
+    [SerializeField] private EventChannelSO m_fullAttacked;
     public State state = State.IDLE;
     public bool isDie = false;
 
@@ -68,6 +69,16 @@ public class Monster : MonoBehaviour
         curHp = hp;
         StartCoroutine(CheckMonsterStart());
         StartCoroutine(MonsterAction());
+    }
+    
+    public void FullDamaged()
+    {
+        curHp -=2;
+        monsterHpBarSlider.value = (float)curHp / hp;
+        if (curHp <= 0)
+        {
+            state = State.DIE;
+        }
     }
 
     IEnumerator CheckMonsterStart()

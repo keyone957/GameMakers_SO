@@ -7,6 +7,7 @@ public class SwitchTestSO : MonoBehaviour
 {
     private PlayerInputController playerInputController;
     [SerializeField] private List<PlayerSkillSO> skillList=new List<PlayerSkillSO>();
+    [SerializeField] private EventChannelSO fullAttckEvent;
     private void Start()
     {
         playerInputController = FindObjectOfType<PlayerInputController>();
@@ -25,6 +26,11 @@ public class SwitchTestSO : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             SwitchSkill(2);
+        }
+
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            fullAttckEvent.RaiseEvent();
         }
     }
 

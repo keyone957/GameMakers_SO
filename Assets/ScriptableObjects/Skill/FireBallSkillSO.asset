@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0d70c8f1114b5d44b081a3467359b22, type: 3}
-  m_Name: FireBallSkill
+  m_Name: FireBallSkillSO
   m_EditorClassIdentifier: 
+  coolDown: 4
   skillPrefab: {fileID: 2095742953246319041, guid: 8b46824991a63954ca8c35ec9c289088, type: 3}
   damage: 3
-  coolDown: 2
