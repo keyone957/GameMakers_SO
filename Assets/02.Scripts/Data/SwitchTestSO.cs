@@ -27,11 +27,6 @@ public class SwitchTestSO : MonoBehaviour
         {
             SwitchSkill(2);
         }
-
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            fullAttckEvent.RaiseEvent();
-        }
     }
 
     private void SwitchSkill(int index)
