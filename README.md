@@ -140,14 +140,14 @@
                         
             ```
             
-            </details>
+      </details>
             
                         
                     
-            <details>
+         <details>
             
             
-            <summary> EventChannelListener.cs </summary>
+         <summary> EventChannelListener.cs </summary>
                         
             ```csharp
             
@@ -190,7 +190,7 @@
             ```
             
             
-            </details>        
+       </details>        
     
 3. 게임 내 모든 UI / UX 기능 구현
 
