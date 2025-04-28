@@ -200,23 +200,22 @@ public class EventChannelListener : MonoBehaviour
   </tr>
 </table> 
 
-![스킬사용.mp4_20250312_202909.gif](%EC%8A%A4%ED%82%AC%EC%82%AC%EC%9A%A9.mp4_20250312_202909.gif)
-
-Scriptable Object기반 전략 패턴, 이벤트 채널 패턴을 이용한 스킬 구현.
-
 ### **[미니게임]**
 
-![Full_version.mp4_20240617_152559.gif](Full_version.mp4_20240617_152559.gif)
+<p align="left">
+    <img src="https://github.com/user-attachments/assets/65b90750-a7cd-4a65-8147-eb830f88cb2d" width="480" height="300"/>
+    <img src="https://github.com/user-attachments/assets/fc3fa35e-c0fc-40af-a4a5-22be2d7d6944" width="480" height="300"/>
+</p>
 
-![Full_version.mp4_20240617_152836.gif](Full_version.mp4_20240617_152836.gif)
+⇒ 일반 던전 맵 중간에 점프 맵, 코인 먹기의 미니게임을 클리어하여 보너스 보상을 얻을 수 있습니다
 
-=⇒ 일반 던전 맵 중간에 점프 맵, 코인 먹기의 미니게임을 클리어하여 보너스 보상을 얻을 수 있습니다
+<p align="left">
+    <img src="https://github.com/user-attachments/assets/11c90670-8366-459a-b9bb-89bc595d0268" width="480" height="300"/>
+    <img src="https://github.com/user-attachments/assets/04c7053e-0f20-427c-8b7a-26ae87f12f62" width="480" height="300"/>
+</p>
 
-![BossStage.gif](BossStage.gif)
 
-![Full_version.mp4_20240617_154415.gif](Full_version.mp4_20240617_154415.gif)
-
-=⇒ 마지막 보스에서는 날아오는 투사체들을 피하면서 보스를 물리쳐, 최종 보상을 얻을 수 있습니다.
+⇒ 마지막 보스에서는 날아오는 투사체들을 피하면서 보스를 물리쳐, 최종 보상을 얻을 수 있습니다.
 
 ### **[UI / UX]**
 
