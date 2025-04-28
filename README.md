@@ -1,32 +1,34 @@
 # 슬라임의 모험
 
 진행 기간: 2024. 05. ~ 2024. 06.
+
 사용한 기술 스택: C#, Unity
+
 개발 인원(역할): 개인
+
 한 줄 설명: 2D 메트로베니아 + 캐주얼 미니게임
+
 비고: 개인 프로젝트
 
 ## 게임 플레이 풀 영상
 
 ---
 
-[https://youtu.be/uiCXmkgLdgo](https://youtu.be/uiCXmkgLdgo)
-
-[https://github.com/keyone957/GameMakers_SO](https://github.com/keyone957/GameMakers_SO)
+[게임 플레이 풀영상](https://youtu.be/uiCXmkgLdgo)
 
 ## 프로젝트 소개
 
 ---
 
 - 2D 메트로배니아 장르 게임과 캐주얼 미니게임을 섞은 게임 입니다.
+<p align="left">
+    <img src="https://github.com/user-attachments/assets/53264f03-a2e7-40de-97da-5bca2d70eae2" width="679" height="378"/>
+  <img src="https://github.com/user-attachments/assets/79e3d24e-8745-4131-867b-542a0de2146b" width="679" height="378"/>
+</p>
 
-![image.png](image.png)
+![Image](https://github.com/user-attachments/assets/f0bc7fcf-fb2e-421d-a292-a1b385f27a17)
 
-![image.png](image%201.png)
-
-![image.png](image%202.png)
-
-![image.png](image%203.png)
+![Image](https://github.com/user-attachments/assets/9c4266d6-836d-4ea0-a041-5aae6f643a52)
 
 ## 주요 기능 구현
 
