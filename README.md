@@ -52,145 +52,145 @@
     - 플레이어 분열 스킬, 공격 구현
     - 플레이어 애니메이션 구현
     - Scriptable Object기반 전략 패턴, 이벤트 채널 패턴을 이용한 스킬 구현
-    <details>
-    <summary> PlayerSkillSO.cs </summary>
-    
-    
-    ```csharp
-        
-                using System.Collections;
-                using System.Collections.Generic;
-                using UnityEngine;
-                public abstract class PlayerSkillSO : ScriptableObject
-                {
-                    public float coolDown;
-                    public abstract void DOSkill();
-                }
-                
-                using System.Collections;
-                using System.Collections.Generic;
-                using UnityEngine;
-                
-                [CreateAssetMenu(fileName = "FireBallSkill", menuName = "SO/FireBallSkillSO")]
-                public class FireBallSO : PlayerSkillSO
-                {
-                    public GameObject skillPrefab;
-                    public int damage;
-                
-                    public override void DOSkill()
-                    {
-                        GameObject fireBallObj = Instantiate(skillPrefab);
-                        fireBallObj.GetComponent<ShootingSkill>().InitValue(damage);
-                    }
-                }
-                using System;
-                using System.Collections;
-                using System.Collections.Generic;
-                using UnityEngine;
-                
-                public class ShootingSkill : MonoBehaviour
-                {
-                  
-                  public int damage;
-                  private Vector3 shootDirection;
-                  private void Update()
-                  {
-                    transform.Translate(shootDirection * 15f * Time.deltaTime);
-                  }
-                
-                  public void InitValue(int soDamage)
-                  {
-                    GameObject player = GameObject.FindWithTag("Player");
-                    transform.position = player.transform.position;
-                    
-                    if (player.transform.rotation.y == 0)
-                    {
-                      shootDirection = Vector3.right;
-                      transform.rotation=Quaternion.Euler(0,0,180);
-                    }
-                    else
-                    {
-                      shootDirection = Vector3.right;
-                    }
-                    damage = soDamage;
-                    Destroy(gameObject, 8f);
-                  }
-                }
-                
-                using System.Collections;
-                using System.Collections.Generic;
-                using Unity.Mathematics;
-                using UnityEngine;
-                
-                [CreateAssetMenu(fileName = "FullAttack", menuName = "SO/FullAttackSkill")]
-                public class FullAttackSkillSO : PlayerSkillSO
-                {
-                    public GameObject skillPrefab;
-                    [SerializeField] private EventChannelSO m_fullAttackSO;
-                    public override void DOSkill()
-                    {
-                        GameObject fullAttackEffect = Instantiate(skillPrefab , GameObject.FindWithTag("Player").transform);
-                        fullAttackEffect.transform.localScale = new Vector3(0.125f, 0.125f, 0.125f);
-                        fullAttackEffect.transform.localPosition = Vector3.zero;
-                        
-                        m_fullAttackSO.RaiseEvent();
-                        Destroy(fullAttackEffect,2f);
-                    }
-                }
-                
-    ```
-    
-    </details>
-    
-                
+            <details>
+            <summary> PlayerSkillSO.cs </summary>
             
-    <details>
-    
-    
-    <summary> EventChannelListener.cs </summary>
+            
+            ```csharp
                 
-    ```csharp
-    
-    
-                using System;
-                using System.Collections;
-                using System.Collections.Generic;
-                using UnityEngine;
-                using UnityEngine.Events;
-                
-                public class EventChannelListener : MonoBehaviour
-                {
+                        using System.Collections;
+                        using System.Collections.Generic;
+                        using UnityEngine;
+                        public abstract class PlayerSkillSO : ScriptableObject
+                        {
+                            public float coolDown;
+                            public abstract void DOSkill();
+                        }
+                        
+                        using System.Collections;
+                        using System.Collections.Generic;
+                        using UnityEngine;
+                        
+                        [CreateAssetMenu(fileName = "FireBallSkill", menuName = "SO/FireBallSkillSO")]
+                        public class FireBallSO : PlayerSkillSO
+                        {
+                            public GameObject skillPrefab;
+                            public int damage;
+                        
+                            public override void DOSkill()
+                            {
+                                GameObject fireBallObj = Instantiate(skillPrefab);
+                                fireBallObj.GetComponent<ShootingSkill>().InitValue(damage);
+                            }
+                        }
+                        using System;
+                        using System.Collections;
+                        using System.Collections.Generic;
+                        using UnityEngine;
+                        
+                        public class ShootingSkill : MonoBehaviour
+                        {
+                          
+                          public int damage;
+                          private Vector3 shootDirection;
+                          private void Update()
+                          {
+                            transform.Translate(shootDirection * 15f * Time.deltaTime);
+                          }
+                        
+                          public void InitValue(int soDamage)
+                          {
+                            GameObject player = GameObject.FindWithTag("Player");
+                            transform.position = player.transform.position;
+                            
+                            if (player.transform.rotation.y == 0)
+                            {
+                              shootDirection = Vector3.right;
+                              transform.rotation=Quaternion.Euler(0,0,180);
+                            }
+                            else
+                            {
+                              shootDirection = Vector3.right;
+                            }
+                            damage = soDamage;
+                            Destroy(gameObject, 8f);
+                          }
+                        }
+                        
+                        using System.Collections;
+                        using System.Collections.Generic;
+                        using Unity.Mathematics;
+                        using UnityEngine;
+                        
+                        [CreateAssetMenu(fileName = "FullAttack", menuName = "SO/FullAttackSkill")]
+                        public class FullAttackSkillSO : PlayerSkillSO
+                        {
+                            public GameObject skillPrefab;
+                            [SerializeField] private EventChannelSO m_fullAttackSO;
+                            public override void DOSkill()
+                            {
+                                GameObject fullAttackEffect = Instantiate(skillPrefab , GameObject.FindWithTag("Player").transform);
+                                fullAttackEffect.transform.localScale = new Vector3(0.125f, 0.125f, 0.125f);
+                                fullAttackEffect.transform.localPosition = Vector3.zero;
+                                
+                                m_fullAttackSO.RaiseEvent();
+                                Destroy(fullAttackEffect,2f);
+                            }
+                        }
+                        
+            ```
+            
+            </details>
+            
+                        
                     
-                    [SerializeField] private EventChannelSO m_EventChannel;
-                    [SerializeField] private UnityEvent m_Response;
-                
-                    private void OnEnable()
-                    {
-                        if (m_EventChannel != null)
+            <details>
+            
+            
+            <summary> EventChannelListener.cs </summary>
+                        
+            ```csharp
+            
+            
+                        using System;
+                        using System.Collections;
+                        using System.Collections.Generic;
+                        using UnityEngine;
+                        using UnityEngine.Events;
+                        
+                        public class EventChannelListener : MonoBehaviour
                         {
-                            m_EventChannel.OnEventRaised += OnEventRaised;
+                            
+                            [SerializeField] private EventChannelSO m_EventChannel;
+                            [SerializeField] private UnityEvent m_Response;
+                        
+                            private void OnEnable()
+                            {
+                                if (m_EventChannel != null)
+                                {
+                                    m_EventChannel.OnEventRaised += OnEventRaised;
+                                }
+                            }
+                        
+                            private void OnDisable()
+                            {
+                                if (m_EventChannel != null)
+                                {
+                                    m_EventChannel.OnEventRaised -= OnEventRaised;
+                                }
+                            }
+                        
+                            public void OnEventRaised()
+                            {
+                                m_Response.Invoke();
+                            }
                         }
-                    }
-                
-                    private void OnDisable()
-                    {
-                        if (m_EventChannel != null)
-                        {
-                            m_EventChannel.OnEventRaised -= OnEventRaised;
-                        }
-                    }
-                
-                    public void OnEventRaised()
-                    {
-                        m_Response.Invoke();
-                    }
-                }
-    
-    
-    ```
-    
-    
-    </details>        
+            
+            
+            ```
+            
+            
+            </details>        
     
 3. 게임 내 모든 UI / UX 기능 구현
 
