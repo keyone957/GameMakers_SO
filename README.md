@@ -49,6 +49,7 @@
 <details>
 <summary> PlayerSkillSO.cs </summary>
 ```csharp
+    
             using System.Collections;
             using System.Collections.Generic;
             using UnityEngine;
@@ -136,10 +137,11 @@
             
         
 <details>
-<summary> PlayerSkillSO.cs </summary>
-- EventChannelListener.cs
+<summary> EventChannelListener.cs </summary>
             
-            ```csharp
+```csharp
+
+
             using System;
             using System.Collections;
             using System.Collections.Generic;
@@ -173,8 +175,10 @@
                     m_Response.Invoke();
                 }
             }
-            
-            ```
+
+
+```
+
 </details>
         
             
