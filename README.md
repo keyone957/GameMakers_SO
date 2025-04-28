@@ -219,25 +219,19 @@ public class EventChannelListener : MonoBehaviour
 
 ### **[UI / UX]**
 
-- 타이틀 씬
+- 타이틀 씬 & 인게임 UI
 
-![image.png](image%204.png)
+<p align="left">
+    <img src="https://github.com/user-attachments/assets/d346adf1-384c-4470-93bd-4d57ce325b5a" width="480" height="300"/>
+    <img src="https://github.com/user-attachments/assets/04d21f02-d974-4d8d-bc92-92c01e836338" width="480" height="300"/>
+</p>
 
-![image.png](image%205.png)
+⇒ 인게임에서 플레이어 상태, 스테이지, 등 필요한 UI를 배치하고 게임 도중에도 메뉴 창을 배치하였습니다. 
 
-=⇒ 메인 화면에서 게임 시작, 환경 설정, 끝내기 버튼을 배치하였습니다.
-
-- 인게임 UI
-
-![image.png](image%206.png)
-
-![image.png](image%207.png)
-
-=⇒ 인게임에서 플레이어 상태, 스테이지, 등 필요한 UI를 배치하고 게임 도중에도 메뉴 창을 배치하였습니다. 
-
-![image.png](image%208.png)
-
-![image.png](image%209.png)
+<p align="left">
+    <img src="https://github.com/user-attachments/assets/608b7f49-d331-44dd-9ca8-bf32f67192be" width="480" height="300"/>
+    <img src="https://github.com/user-attachments/assets/7ef4c6bb-c6fb-48d7-87fd-a5bb892b0603" width="480" height="300"/>
+</p>
 
 =⇒ Scriptable Object를 이용하여 상점 기능을 구현하였습니다.
 
