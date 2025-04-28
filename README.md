@@ -46,7 +46,7 @@
     - 재화, 보상 시스템
 2. 게임 플레이 관련
     - Scriptable Object기반 전략 패턴, 이벤트 채널 패턴을 이용한 스킬 구현
-    - <details>
+<details>
 <summary> PlayerSkillSO.cs </summary>
     ```csharp
             using System.Collections;
