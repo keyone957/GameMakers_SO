@@ -22,8 +22,8 @@
 
 - 2D 메트로배니아 장르 게임과 캐주얼 미니게임을 섞은 게임 입니다.
 <p align="left">
-    <img src="https://github.com/user-attachments/assets/53264f03-a2e7-40de-97da-5bca2d70eae2" width="679" height="378"/>
-  <img src="https://github.com/user-attachments/assets/79e3d24e-8745-4131-867b-542a0de2146b" width="679" height="378"/>
+    <img src="https://github.com/user-attachments/assets/53264f03-a2e7-40de-97da-5bca2d70eae2" width="609" height="308"/>
+  <img src="https://github.com/user-attachments/assets/79e3d24e-8745-4131-867b-542a0de2146b" width="609" height="308"/>
 </p>
 
 ![Image](https://github.com/user-attachments/assets/f0bc7fcf-fb2e-421d-a292-a1b385f27a17)
