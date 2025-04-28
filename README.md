@@ -26,9 +26,10 @@
     <img src="https://github.com/user-attachments/assets/79e3d24e-8745-4131-867b-542a0de2146b" width="500" height="300"/>
 </p>
 
-![Image](https://github.com/user-attachments/assets/f0bc7fcf-fb2e-421d-a292-a1b385f27a17)
-
-![Image](https://github.com/user-attachments/assets/9c4266d6-836d-4ea0-a041-5aae6f643a52)
+<p align="left">
+    <img src="https://github.com/user-attachments/assets/f0bc7fcf-fb2e-421d-a292-a1b385f27a17" width="500" height="300"/>
+    <img src="https://github.com/user-attachments/assets/9c4266d6-836d-4ea0-a041-5aae6f643a52" width="500" height="300"/>
+</p>
 
 ## 주요 기능 구현
 
