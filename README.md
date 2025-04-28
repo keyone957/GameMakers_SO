@@ -191,9 +191,14 @@ public class EventChannelListener : MonoBehaviour
   </tr>
 </table>
 
-![특수 스킬.mp4_20250315_204245.gif](%ED%8A%B9%EC%88%98_%EC%8A%A4%ED%82%AC.mp4_20250315_204245.gif)
-
-플레이어 분열 스킬을 사용하면 이동 속도 증가 및 공격력은 내려가지만 맵 내 일반 상태 일 때는 들어가지 못하는 공간에 들어갈 수 있다  
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/362b4886-562a-49b1-b3aa-7c40c480a487" width="480" height="300" alt="Player Attack"/><br/>
+    플레이어 분열 스킬을 사용하면 이동 속도 증가 및 공격력은 내려가지만 맵 내 일반 상태 일 때는 들어가지 못하는 공간에 들어갈 수 있다 
+    </td>
+  </tr>
+</table> 
 
 ![스킬사용.mp4_20250312_202909.gif](%EC%8A%A4%ED%82%AC%EC%82%AC%EC%9A%A9.mp4_20250312_202909.gif)
 
