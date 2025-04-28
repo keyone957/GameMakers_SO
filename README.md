@@ -48,6 +48,8 @@
     - Scriptable Object기반 전략 패턴, 이벤트 채널 패턴을 이용한 스킬 구현
 <details>
 <summary> PlayerSkillSO.cs </summary>
+
+
 ```csharp
     
             using System.Collections;
@@ -137,6 +139,8 @@
             
         
 <details>
+
+
 <summary> EventChannelListener.cs </summary>
             
 ```csharp
