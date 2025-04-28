@@ -181,11 +181,11 @@ public class EventChannelListener : MonoBehaviour
 <table>
   <tr>
     <td align="center">
-      <img src="https://github.com/user-attachments/assets/1e04e85a-6194-414d-9baa-ea4af93bd388" width="500" height="300" alt="Player Attack"/><br/>
+      <img src="https://github.com/user-attachments/assets/1e04e85a-6194-414d-9baa-ea4af93bd388" width="480" height="300" alt="Player Attack"/><br/>
       플레이어 공격, 피격, 피격 시 무적 판정 기능 구현
     </td>
     <td align="center">
-      <img src="https://github.com/user-attachments/assets/f76bc08a-abe8-4812-b4c8-f22ad6d9bed3" width="500" height="300" alt="Skill Pattern"/><br/>
+      <img src="https://github.com/user-attachments/assets/f76bc08a-abe8-4812-b4c8-f22ad6d9bed3" width="480" height="300" alt="Skill Pattern"/><br/>
       Scriptable Object 기반 전략 패턴, 이벤트 채널 패턴을 이용한 스킬 구현.
     </td>
   </tr>
