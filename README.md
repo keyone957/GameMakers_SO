@@ -48,7 +48,7 @@
     - Scriptable Object기반 전략 패턴, 이벤트 채널 패턴을 이용한 스킬 구현
 <details>
 <summary> PlayerSkillSO.cs </summary>
-            ```csharp
+```csharp
             using System.Collections;
             using System.Collections.Generic;
             using UnityEngine;
@@ -129,7 +129,7 @@
                 }
             }
             
-            ```
+```
 
 </details>
             
