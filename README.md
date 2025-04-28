@@ -132,10 +132,12 @@
 ```
 
 </details>
+
             
         
-            
-        - EventChannelListener.cs
+<details>
+<summary> PlayerSkillSO.cs </summary>
+- EventChannelListener.cs
             
             ```csharp
             using System;
@@ -173,6 +175,8 @@
             }
             
             ```
+</details>
+        
             
     - 몬스터 AI FSM사용하여 구현
     - 플레이어 카메라 관련
