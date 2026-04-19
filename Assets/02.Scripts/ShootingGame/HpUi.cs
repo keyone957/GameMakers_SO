@@ -6,9 +6,6 @@ using TMPro;
 
 // 하트 소멸 함수
 //코드 리팩토링 및 얻는 코인 개수 변경
-// 최초 작성자: 하경림
-// 수정자: 홍원기
-// 최종 수정일: 2024-06-06
 public class HpUi : MonoBehaviour
 {
     public GameObject Finish;

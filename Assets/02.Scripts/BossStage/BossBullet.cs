@@ -3,9 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 // 보스 총알 collider
-// 최초 작성자: 홍원기
-// 수정자: 
-// 최종 수정일: 2024-06-11
+
 public class BossBullet : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D other)

@@ -5,9 +5,7 @@ using UnityEngine.SceneManagement;
 
 //전체 게임 관리하는 씬 시스템 구성
 //테스트코드 추가
-// 최초 작성자 : 홍원기
-// 수정자 : 홍원기
-// 최종 수정일 : 2024-06-11
+
 public class SceneSystem : MonoBehaviour
 {
     public enum NextStageType

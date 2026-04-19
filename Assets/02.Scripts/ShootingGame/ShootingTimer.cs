@@ -5,9 +5,6 @@ using UnityEngine.UI;
 
 // 30초 타이머 기능 구현
 // 코드 리팩토링 and 얻는 코인 수 변경
-// 최초 작성자: 하경림
-// 수정자: 홍원기
-// 최종 수정일: 2024-06-06
 public class ShootingTimer : MonoBehaviour
 {
     public GameObject Finish;

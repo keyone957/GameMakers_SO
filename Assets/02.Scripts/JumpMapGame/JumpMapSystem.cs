@@ -6,10 +6,7 @@ using UnityEngine.SceneManagement;
 
 // 점프맵을 담당하는 컴포넌트 구성
 // 게임종료 팝업창 관련 코드 추가, 남은 시간에 따라 점수 부여, 점수별로 다른 색상적용
-// 테스트 코드 추가
-// 최초 작성자 : 장현우
-// 수정자 : 홍원기
-// 최종 수정일 : 2024-06-11
+
 
 public class JumpMapSystem : MonoBehaviour
 {

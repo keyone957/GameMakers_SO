@@ -4,9 +4,6 @@ using UnityEngine;
 using TMPro;
 // 게임 시작전 3,2,1, GO 게임신 정지 함수
 //코드 리팩토링
-// 최초 작성자: 하경림
-// 수정자: 홍원기
-// 최종 수정일: 2024-06-11
 public class CoinBonuCounter : MonoBehaviour
 {
     public GameObject Panel;

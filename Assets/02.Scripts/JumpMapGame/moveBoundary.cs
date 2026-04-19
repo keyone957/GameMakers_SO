@@ -4,9 +4,7 @@ using UnityEngine;
 
 //카메라 움직임 제한 관련 컴포넌트
 //backgroud 밖의 좌표로 플레이어 이동 제한위해 생성,
-// 작성자 : 장현우
-// 수정자 : 장현우
-// 최종 수정일 : 2024-05-11
+
 
 public class MoveBoundary : MonoBehaviour
 {

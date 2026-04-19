@@ -5,9 +5,7 @@ using UnityEngine;
 
 // 미사일 컴포넌트
 //플레이어가 안먹었을때 3초뒤에 사라짐
-// 최초 작성자: 홍원기
-// 수정자: 
-// 최종 수정일: 2024-06-11
+
 public class Bullet : MonoBehaviour
 {
     [SerializeField] private Transform target; // 이동할 목표 위치

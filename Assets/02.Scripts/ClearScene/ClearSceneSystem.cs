@@ -6,9 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 //클리어씬 시스템
-// 최초 작성자 : 홍원기
-// 수정자 : 
-// 최종 수정일 : 2024-06-12
+
 public class ClearSceneSystem : MonoBehaviour
 {
     [SerializeField] private Button finishBtn;

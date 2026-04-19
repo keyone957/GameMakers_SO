@@ -4,9 +4,7 @@ using System.Collections;
 
 //씬이동할때 페이드인 페이드아웃
 //게임오버시 페이드아웃 함수 따로 추가
-// 최초 작성자 : 홍원기
-// 수정자 : 홍원기
-// 최종 수정일 : 2024-06-07
+
 public class FadeOverlay : MonoBehaviour
 {
     [SerializeField] private Image _sprite = null;

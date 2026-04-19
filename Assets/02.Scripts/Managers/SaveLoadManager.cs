@@ -2,9 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 //플레이어 돈 저장 기능
-//최초 작성자 : 홍원기
-// 수정자 : 홍원기
-// 최종 수정일 : 2024-06-13
+
 public class SaveLoadManager : MonoBehaviour
 {
     public static SaveLoadManager instance { get; private set; }

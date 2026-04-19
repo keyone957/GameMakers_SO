@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 //맨처음 로고에서 이전에 저장된 화면모드 값을 가져와 화면모드 조절
 //초기화 추가
-// 최초 작성자 : 홍원기
-// 수정자 : 홍원기
-// 최종 수정일 : 2024-06-04
+
 public class InitialGame : MonoBehaviour
 {
     // Start is called before the first frame update

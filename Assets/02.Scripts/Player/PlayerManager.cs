@@ -6,9 +6,7 @@ using UnityEngine.UI;
 
 //모든씬에서 플레이어 정보를 가져와야하므로 DontDestroyOnLoad로 생성 하여 플레이어 정보 가져옴
 //플레이어 죽었을때 씬에 있는 몬스터 다 삭제해버리기
-// 최초 작성자 : 홍원기
-// 수정자 : 홍원기
-// 최종 수정일 : 2024-06-07
+
 public class PlayerManager : MonoBehaviour
 {
     public static PlayerManager instance { get; private set; }

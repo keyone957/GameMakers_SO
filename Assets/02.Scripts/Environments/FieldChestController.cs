@@ -3,9 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 // 그냥 필드에 숨겨져있는 보물상자
-// 최초 작성자 : 홍원기
-// 수정자 : 홍원기
-// 최종 수정일 : 2024-06-07
+
 public class FieldChestController : MonoBehaviour
 {
     [SerializeField] private GameObject keyBoardUI;

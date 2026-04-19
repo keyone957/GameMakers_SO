@@ -4,9 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 //세팅창에서 화면모드, 브금, 효과음 볼륨 조절
-// 최초 작성자 : 홍원기
-// 수정자 :
-// 최종 수정일 : 2024-05-31
+
 public class SettingMenu : MonoBehaviour
 {
     [SerializeField] private Slider soundSlider;

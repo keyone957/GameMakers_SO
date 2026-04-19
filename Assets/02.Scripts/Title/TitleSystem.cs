@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 //타이틀 씬에 있는 것들 관리.
 //타이틀씬 들어올때 저장된 브금, 효과음 볼륨 세팅
-// 최초 작성자 : 홍원기
-// 수정자 : 홍원기
-// 최종 수정일 : 2024-05-31
+
 public class TitleSystem : MonoBehaviour
 {
     void Start()

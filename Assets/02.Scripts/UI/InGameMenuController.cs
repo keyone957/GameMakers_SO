@@ -6,9 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 //인게임 메뉴 관리하는 컴포넌트
 //세팅창 띄우기
-// 최초 작성자 : 홍원기
-// 수정자 : 홍원기
-// 최종 수정일 : 2024-05-31
+
 public class InGameMenuController : MonoBehaviour
 {
     public static InGameMenuController instance { get; private set; }

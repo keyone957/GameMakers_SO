@@ -4,9 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 // 보스맵 시스템
-// 최초 작성자: 홍원기
-// 수정자: 
-// 최종 수정일: 2024-06-11
+
+
 public class BossStageSystem : MonoBehaviour
 {
     public static BossStageSystem instance { get; private set; }

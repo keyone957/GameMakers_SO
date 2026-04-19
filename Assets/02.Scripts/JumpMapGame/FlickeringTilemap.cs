@@ -4,9 +4,6 @@ using UnityEngine.Tilemaps;
 
 //사라지는 맵타일 관련 컴포넌트
 //2초 단위로 맵타일 활성 비활성 반복
-// 작성자 : 장현우
-// 수정자 : 장현우
-// 최종 수정일 : 2024-05-21
 
 public class FlickeringTilemap : MonoBehaviour
 {

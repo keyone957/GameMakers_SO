@@ -4,9 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 //플레이어를 분열 슬라임이 따라다니게
 //애니메이터 해시 파라미터사용
-// 최초 작성자 : 홍원기
-// 수정자 : 홍원기
-// 최종 수정일 : 2024-05-29
+
 public class DividePlayerInputController : MonoBehaviour
 {
     [SerializeField] private Animator anim;

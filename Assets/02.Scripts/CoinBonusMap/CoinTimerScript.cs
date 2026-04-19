@@ -5,9 +5,7 @@ using TMPro;
 
 // 원 닿게 될시 타이머 시작
 //코드 리팩토링
-// 최초 작성자: 하경림
-// 수정자: 홍원기
-// 최종 수정일: 2024-06-11
+
 
 public class CoinTimerScript : MonoBehaviour
 {

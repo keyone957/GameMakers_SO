@@ -5,9 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 // 맨처음에 게임 시작할 때 로고 or 이미지 나오고 페이드인 페이드 아웃 후 타이틀 화면으로 넘어감(그냥 연출용)
-// 최초 작성자 : 홍원기
-// 수정자 : 
-// 최종 수정일 : 2024-04-05
+
 public class ShowImage : MonoBehaviour
 {
     [SerializeField] public bool _finished = false;

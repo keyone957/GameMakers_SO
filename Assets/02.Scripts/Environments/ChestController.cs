@@ -6,9 +6,7 @@ using UnityEngine;
 //게임 클리어시 나타나는 보물상자 및 w누르면 돈 추가
 //사운드 매니저 사용
 //애니메이터 프로퍼티값 추가
-// 최초 작성자 : 홍원기
-// 수정자 : 홍원기
-// 최종 수정일 : 2024-05-29
+
 public class ChestController : MonoBehaviour
 {
     public enum CHESTTYPE

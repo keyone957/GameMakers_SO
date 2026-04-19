@@ -5,9 +5,7 @@ using UnityEngine;
 
 //환경설정 위한 volume
 //playerprefab값 초기화
-// 최초 작성자 : 홍원기
-// 수정자 : 홍원기
-// 최종 수정일 : 2024-06-04
+
 public class SoundManager : MonoBehaviour
 {
     [SerializeField] private AudioSource _bgmSource = null;

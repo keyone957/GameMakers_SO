@@ -1,7 +1,5 @@
 //던전 BGM추가
-// 최초 작성자 : 홍원기
-// 수정자 : 
-// 최종 수정일 : 2024-05-24
+
 public static class Define
 {
     

@@ -4,9 +4,6 @@ using UnityEngine;
 
 // 추락시 팝업창을 활성화하는 컴포넌트
 // 죽었을때 효과음
-// 최초 작성자 : 장현우
-// 수정자 : 홍원기
-// 최종 수정일 : 2024-06-10
 
 public class DeathBlock : MonoBehaviour
 {

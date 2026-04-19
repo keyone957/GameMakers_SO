@@ -5,10 +5,6 @@ using UnityEngine.SceneManagement;
 
 // 트리거 스크립트
 // 도달하면 다음 씬 로드, 우선 비워둠
-//싱글톤 수정
-// 최초 작성자 : 장현우
-// 수정자 : 홍원기
-// 최종 수정일 : 2024-06-09
 
 public class Trigger2 : MonoBehaviour
 {

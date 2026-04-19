@@ -4,9 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 // 슈팅맵 들어왔을때 초기화 
 //테스트코드 추가
-// 최초 작성자: 홍원기
-// 수정자: 
-// 최종 수정일: 2024-06-11
+
 public class ShootingGameSystem : MonoBehaviour
 {
     [SerializeField] private Button finishBtn;

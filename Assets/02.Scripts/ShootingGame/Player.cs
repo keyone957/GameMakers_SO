@@ -2,9 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 // 코드 리팩토링 및 이펙트 사운드 추가
-// 최초 작성자: 하경림
-// 수정자: 홍원기
-// 최종 수정일: 2024-06-06
 public class Player : MonoBehaviour
 {
     [SerializeField] private Animator anim;

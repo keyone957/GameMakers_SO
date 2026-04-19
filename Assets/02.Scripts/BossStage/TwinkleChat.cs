@@ -5,9 +5,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 // 한글자씩 나오는 대화창
-// 최초 작성자: 홍원기
-// 수정자: 
-// 최종 수정일: 2024-06-11
+
 public class TwinkleChat : MonoBehaviour
 { 
     [SerializeField] public TMP_Text targetText;

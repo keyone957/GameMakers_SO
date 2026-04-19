@@ -4,9 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 //NPC클릭했을때 UI띄우기.
 //인게임 메뉴가 활성화 되어있을때는 npc클릭 못하게
-// 최초 작성자 : 홍원기
-// 수정자 : 홍원기
-// 최종 수정일 : 2024-05-11
+
 public class NPCController : MonoBehaviour
 {
     [SerializeField] private GameObject activeUI;

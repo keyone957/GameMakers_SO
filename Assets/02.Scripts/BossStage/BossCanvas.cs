@@ -5,9 +5,7 @@ using TMPro;
 using UnityEngine.UI;
 
 // 보스 스테이지 UI
-// 최초 작성자: 홍원기
-// 수정자: 
-// 최종 수정일: 2024-06-11
+
 public class BossCanvas : MonoBehaviour
 {
     [SerializeField] public TMP_Text targetText;

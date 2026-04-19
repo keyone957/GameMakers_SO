@@ -8,10 +8,6 @@ using UnityEngine.SceneManagement;
 //제한시간 관련 컴포넌트
 //타이머 소진 시 초기화 하는 부분 제거
 //타임아웃 시 리스폰 컴포넌트 작성완료
-//싱글톤 수정
-// 작성자 : 장현우
-// 수정자 : 홍원기
-// 최종 수정일 : 2024-06-09
 
 
 public class Timer : MonoBehaviour
