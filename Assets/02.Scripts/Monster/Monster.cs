@@ -8,9 +8,6 @@ using UnityEngine.UI;
 //몬스터 공격할때 에니메이션 이벤트 추가
 //몬스터 피격, 죽음 상태 추가
 //몬스터 타입에 따라 효과음다르게
-// 최초 작성자 : 홍원기
-// 수정자 : 홍원기
-// 최종 수정일 : 2024-05-30
 public class Monster : MonoBehaviour
 {
     public enum State
@@ -183,13 +180,14 @@ public class Monster : MonoBehaviour
 
         if (other.gameObject.CompareTag("ShootingObj"))
         {
-            curHp -= other.gameObject.GetComponent<ShootingSkill>().damage;
+            curHp -= other.gameObject.GetComponent<ShootingSkill>().Damage;
             monsterHpBarSlider.value = (float)curHp / hp;
             if (curHp <= 0)
             {
                 state = State.DIE;
             }
-            Destroy(other.gameObject);
+            // Destroy(other.gameObject);
+            PoolManager.Instance.ReturnObject("Shooting",other.gameObject);
         }
     }
 

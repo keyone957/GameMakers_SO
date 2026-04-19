@@ -2,18 +2,21 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cysharp.Threading.Tasks;
 
 public class ShootingSkill : MonoBehaviour
 {
-  
-  public int damage;
+  [SerializeField] private float shotSpeed;
+  [SerializeField] private float shootingDuration;
   private Vector3 shootDirection;
+  public int Damage { get; private set; }
+  
   private void Update()
   {
-    transform.Translate(shootDirection * 15f * Time.deltaTime);
+    transform.Translate(shootDirection * shotSpeed * Time.deltaTime);
   }
 
-  public void InitValue(int soDamage)
+  public async UniTaskVoid InitValue(int soDamage)
   {
     GameObject player = GameObject.FindWithTag("Player");
     transform.position = player.transform.position;
@@ -27,7 +30,8 @@ public class ShootingSkill : MonoBehaviour
     {
       shootDirection = Vector3.right;
     }
-    damage = soDamage;
-    Destroy(gameObject, 8f);
+    Damage = soDamage;
+    await UniTask.Delay(TimeSpan.FromSeconds(shootingDuration));
+    PoolManager.Instance.ReturnObject("Shooting", gameObject);
   }
 }

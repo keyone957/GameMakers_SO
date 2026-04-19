@@ -4,14 +4,9 @@ using UnityEngine;
 
 //플레이어(슬라임) Input관련 컴포넌트
 //플레이어 사망함수 추가
-// 최초 작성자 : 홍원기
-// 수정자 : 홍원기
-// 최종 수정일 : 2024-06-07
+
 public class PlayerInputController : MonoBehaviour
 {
-    [SerializeField] private Animator anim;
-    [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private List<AudioClip> playerSound = new List<AudioClip>();
     [SerializeField] private AudioSource playerAudioSource;
     [SerializeField] private GameObject jumpEffect;
     [SerializeField] private float jumpForce;
@@ -24,6 +19,8 @@ public class PlayerInputController : MonoBehaviour
     [SerializeField] private SpriteRenderer slimeSpr;
     [SerializeField] private SpriteRenderer divideSlimeSpr;
     [SerializeField] public PlayerSkillSO playerSkillSO;
+    private Rigidbody2D rb;
+    private Animator anim;
     private bool isDivide;
     private int jumpCnt;
     private float divideCooldown = 2f; //분열 스킬 쿨타임
@@ -39,7 +36,14 @@ public class PlayerInputController : MonoBehaviour
     private readonly int hashIdle = Animator.StringToHash("IsIdle");
     private readonly int hashMove = Animator.StringToHash("IsMove");
     private readonly int hashAttack = Animator.StringToHash("IsAttack");
-    public float nextSkillTime = 0f; 
+    public float nextSkillTime = 0f;
+
+    private void Awake()
+    {
+        anim = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
+        
+    }
 
     private void Start()
     {

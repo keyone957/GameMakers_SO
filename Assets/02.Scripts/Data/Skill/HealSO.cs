@@ -4,10 +4,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "HealSkillSO", menuName = "SO/HealSkillSO")]
 public class HealSO : PlayerSkillSO
 {
-    public GameObject skillPrefab;
     public override void DOSkill()
     {
-        GameObject healPrefab = Instantiate(skillPrefab);
-        healPrefab.GetComponent<HealingSkill>().Healing();
+        GameObject healPrefab = PoolManager.Instance.GetObject("Healing", null, Quaternion.identity, null);
+        healPrefab.GetComponent<HealingSkill>().Healing().Forget();
     }
 }

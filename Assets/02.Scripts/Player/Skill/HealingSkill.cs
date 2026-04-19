@@ -2,10 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Cysharp.Threading.Tasks;
 public class HealingSkill : MonoBehaviour
 {
-    public void Healing()
+    [SerializeField] private float effectDuration;
+    public async UniTaskVoid Healing()
     {
         transform.parent = GameObject.FindWithTag("Player").transform;
         transform.localPosition = Vector3.zero;
@@ -14,6 +15,8 @@ public class HealingSkill : MonoBehaviour
             PlayerManager.instance.playerHp += 1;
             AllSceneCanvas.instance.PlayerHPChange(PlayerManager.instance.playerHp);
         }
-        Destroy(gameObject, 2.0f);
+        // Destroy(gameObject, 2.0f);
+        await UniTask.Delay(TimeSpan.FromSeconds(effectDuration));
+        PoolManager.Instance.ReturnObject("Healing", gameObject);
     }
 }

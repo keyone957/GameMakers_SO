@@ -9,11 +9,15 @@ using Random = UnityEngine.Random;
 //던전 씬에 사용될 시스템 컴포넌트추가
 //몬스터 갯수에 따라 ui띄우기
 //테스트코드 추가
-// 최초 작성자 : 홍원기
-// 수정자 : 홍원기
-// 최종 수정일 : 2024-06-11
+
 public class DungeonSystem : MonoBehaviour
 {
+    private const string shootingPoolName = "Shooting";
+    private const string healPoolName = "Healing";
+    private const string fullAttackPoolName = "FullAttack";
+    [SerializeField] private ShootingSkill shootingPrefab;
+    [SerializeField] private HealingSkill healPrefab;
+    [SerializeField] private GameObject fullAttackPrefab;
     public static DungeonSystem instance { get; private set; }
     [SerializeField] private Transform[] monsterSpawnPoint;
     [SerializeField] private GameObject[] monsterPrefab;
@@ -30,6 +34,7 @@ public class DungeonSystem : MonoBehaviour
     }
     void Start()
     {
+        PoolManager.Instance.ClearAllPools();
         SpawnMonster();
         InitializeDungeonScene();
         PlayerManager.instance.AssignSpriteRenderers();
@@ -61,6 +66,7 @@ public class DungeonSystem : MonoBehaviour
     private void InitializeDungeonScene()
     {
         PlayerManager.instance.playerPower = 2;
+        InitPool();
         monsterCnt = monsterSpawnPoint.Length;
         soundPlayed = false;
         AllSceneCanvas.instance.monsterCnt.SetActive(true);
@@ -96,5 +102,12 @@ public class DungeonSystem : MonoBehaviour
             Instantiate(monsterPrefab[randomMonsterPrefab], monsterSpawnPoint[i].position,monsterSpawnPoint[i].rotation);
         }
     }
-    
+
+    private void InitPool()
+    {
+        PoolManager.Instance.CreatePool(shootingPoolName,shootingPrefab.gameObject,null,5);
+        PoolManager.Instance.CreatePool(healPoolName,healPrefab.gameObject,null,5);
+        PoolManager.Instance.CreatePool(fullAttackPoolName,fullAttackPrefab,null,5);
+    }
+
 }

@@ -7,27 +7,27 @@ using UnityEngine.Events;
 public class EventChannelListener : MonoBehaviour
 {
     
-    [SerializeField] private EventChannelSO m_EventChannel;
-    [SerializeField] private UnityEvent m_Response;
+    [SerializeField] private EventChannelSO _eventChannel;
+    [SerializeField] private UnityEvent _response;
 
     private void OnEnable()
     {
-        if (m_EventChannel != null)
+        if (_eventChannel != null)
         {
-            m_EventChannel.OnEventRaised += OnEventRaised;
+            _eventChannel.OnEventRaised += OnEventRaised;
         }
     }
 
     private void OnDisable()
     {
-        if (m_EventChannel != null)
+        if (_eventChannel != null)
         {
-            m_EventChannel.OnEventRaised -= OnEventRaised;
+            _eventChannel.OnEventRaised -= OnEventRaised;
         }
     }
 
     public void OnEventRaised()
     {
-        m_Response.Invoke();
+        _response.Invoke();
     }
 }

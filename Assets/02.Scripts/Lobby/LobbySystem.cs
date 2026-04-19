@@ -8,17 +8,25 @@ using UnityEngine;
 
 public class LobbySystem : MonoBehaviour
 {
+    private const string shootingPoolName = "Shooting";
+    private const string healPoolName = "Healing";
+    private const string fullAttackPoolName = "FullAttack";
+    [SerializeField] private ShootingSkill shootingPrefab;
+    [SerializeField] private HealingSkill healPrefab;
+    [SerializeField] private GameObject fullAttackPrefab;
     
     void Start()
     {
         StartCoroutine(SceneStartSequence());
         InitializeLobbyScene();
+        
     }
 
     private void InitializeLobbyScene()
     {
         // PlayerPrefs.SetInt("playerCoin",PlayerManager.instance.playerMoney);
         SaveLoadManager.instance.InitialPlayerMoney();
+        InitPool();
         SceneSystem.instance.isClearStage = true;
         SceneSystem.instance._fadeOverlay.gameObject.SetActive(false);
         SceneSystem.instance.currentStage = 0;
@@ -39,6 +47,12 @@ public class LobbySystem : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
         SoundManager._instance.PlayBGM(Define._lobbyBgm);
+    }
+    private void InitPool()
+    {
+        PoolManager.Instance.CreatePool(shootingPoolName,shootingPrefab.gameObject,null,5);
+        PoolManager.Instance.CreatePool(healPoolName,healPrefab.gameObject,null,5);
+        PoolManager.Instance.CreatePool(fullAttackPoolName,fullAttackPrefab,null,5);
     }
     
 }

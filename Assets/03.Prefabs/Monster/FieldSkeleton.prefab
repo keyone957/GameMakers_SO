@@ -361,7 +361,7 @@ MonoBehaviour:
   hpCanvas: {fileID: 5925834048526143925}
   monsterHpBarSlider: {fileID: 1354867453701397125}
   monsterType: 1
-  m_fullAttacked: {fileID: 0}
+  m_fullAttacked: {fileID: 11400000, guid: f2ddde1dc2fe3cd41b50d4db75bef4c8, type: 2}
   state: 0
   isDie: 0
   playerTrans: {fileID: 0}
@@ -412,8 +412,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 070a96c38a4794c41a6a2b6e8c0a855d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EventChannel: {fileID: 11400000, guid: f2ddde1dc2fe3cd41b50d4db75bef4c8, type: 2}
-  m_Response:
+  _eventChannel: {fileID: 11400000, guid: f2ddde1dc2fe3cd41b50d4db75bef4c8, type: 2}
+  _response:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5662517269797548470}

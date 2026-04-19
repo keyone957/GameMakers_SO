@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coolDown: 10
   skillPrefab: {fileID: 1707406610436744, guid: 714228ad5e9990742957d6c7445e9116, type: 3}
-  m_fullAttackSO: {fileID: 11400000, guid: f2ddde1dc2fe3cd41b50d4db75bef4c8, type: 2}
+  fullAttackSO: {fileID: 11400000, guid: f2ddde1dc2fe3cd41b50d4db75bef4c8, type: 2}
