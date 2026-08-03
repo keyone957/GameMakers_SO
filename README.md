@@ -55,28 +55,25 @@
    - Scriptable Object 기반 전략 패턴 & 이벤트 채널 패턴을 이용한 스킬 구현
 
 <details>
-<summary><h2>ScriptableObject 기반 전략 패턴으로 확장 가능한 스킬 시스템 구조 개선</h2></summary>
-스킬 실행 로직이 플레이어 입력 처리 컴포넌트에 직접 구현되어 있어 플레이어가 어떤 스킬을 사용할지와 스킬이 어떻게 동작하는지에 대한 책임이 분리되지 않아 OCP와 SRP 원칙이 지켜지지 않은 상태.
+<summary><h2>Scriptable Object 기반 전략 패턴을 활용한 스킬 실행 구조 개선</h2></summary>
 
-그로 인해 확장성이 떨어지고 유연한 스킬 구현이 어려웠음.
-<details>
-<summary><code>PlayerSkillSO.cs</code></summary>
+<h3>문제 상황</h3>
+초기에는 스킬 실행 로직이 플레이어 입력 컴포넌트에 결합되어 신규 스킬 추가 시 기존 입력 코드까지 수정해야 했으며, 입력 처리와 구체적인 스킬 동작의 책임도 분리되지 않은 상태.
+
+또한 전체 공격이 씬의 몬스터를 직접 탐색하면 스킬과 몬스터 사이의 의존성이 높아지는 문제가 있었음.
+
+<h3>해결 1. PlayerSkillSO 전략 적용</h3>
+
+스킬의 공통 쿨타임과 스킬 실행을 추상 <code>PlayerSkillSO</code>로 정의하고, 각 스킬이 자신의 실행 로직을 구현하도록 구성
     
 ```csharp
 
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public abstract class PlayerSkillSO : ScriptableObject
 {
-    public float coolDown;
+    [SerializeField] private float coolDown;
+    public float CoolDown => coolDown;
     public abstract void DOSkill();
 }
-
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
 [CreateAssetMenu(fileName = "FireBallSkill", menuName = "SO/FireBallSkillSO")]
 public class FireBallSO : PlayerSkillSO
@@ -89,132 +86,97 @@ public class FireBallSO : PlayerSkillSO
         fireBallObj.GetComponent<ShootingSkill>().InitValue(damage).Forget();
     }
 }
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using Cysharp.Threading.Tasks;
 
-public class ShootingSkill : MonoBehaviour
+```
+
+<code>PlayerInputController</code>는 구체적인 스킬 타입을 판별하지 않고 현재 장착된 PlayerSkillSO의 실행 메서드와 쿨타임만 사용
+
+```csharp
+
+private void UseSkill()
 {
-  [SerializeField] private float shotSpeed;
-  [SerializeField] private float shootingDuration;
-  private Vector3 shootDirection;
-  public int Damage { get; private set; }
-  
-  private void Update()
-  {
-    transform.Translate(shootDirection * shotSpeed * Time.deltaTime);
-  }
+    if (Time.time < nextSkillTime)
+        return;
 
-  public async UniTaskVoid InitValue(int soDamage)
-  {
-    GameObject player = GameObject.FindWithTag("Player");
-    transform.position = player.transform.position;
-    
-    if (player.transform.rotation.y == 0)
-    {
-      shootDirection = Vector3.right;
-      transform.rotation=Quaternion.Euler(0,0,180);
-    }
-    else
-    {
-      shootDirection = Vector3.right;
-    }
-    Damage = soDamage;
-    await UniTask.Delay(TimeSpan.FromSeconds(shootingDuration));
-    PoolManager.Instance.ReturnObject("Shooting", gameObject);
-  }
+    playerSkillSO.DOSkill();
+    nextSkillTime = Time.time + playerSkillSO.CoolDown;
 }
 
 ```
-</details>
-스킬 로직을 플레이어로부터 분리하기 위해 전략 패턴을 Scriptable Object 기반으로 적용함.
 
-- `PlayerSkillSO.cs` 추상 클래스를 정의하여 스킬 실행 인터페이스를 통일
-- 각 스킬을 개별 전략 객체로 구현
-- 플레이어 컴포넌트는 구체적인 스킬 타입을 알 필요 없이 `DOSkill()` 메서드만 호출하도록 함.
-- 또한 Scriptable Object를 사용함으로써 코드 수정 없이 SO만 갈아 끼우면 여러 스킬을 사용할 수 있음.
+- 기존 스킬은 SO 참조만 교체하여 사용
+- 신규 스킬은 구현체와 SO 에셋만 추가하고 기존 `UseSkill()`은 재사용
+- 스킬 호출부의 조건 분기를 제거하여 코드 수정 범위 최소화
+- 스킬 호출부에 OCP를 적용하고 실행 흐름의 책임을 분리
 
-<details>
-<summary><code> FullAttackSkillSO.cs+EventChannelListener.cs </code></summary>
-    
+<h3>해결 2. EventChannelSO로 전체 공격의 직접 참조 제거</h3>
+
+전체 공격은 개별 몬스터를 직접 탐색하거나 참조 하지 않고 <code>EventChannelSO</code>를 통해 공격 이벤트만 발행하도록 구성
+
 ```csharp
 
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.Mathematics;
-using UnityEngine;
-using Cysharp.Threading.Tasks;
-
-[CreateAssetMenu(fileName = "FullAttack", menuName = "SO/FullAttackSkill")]
-public class FullAttackSkillSO : PlayerSkillSO
+[CreateAssetMenu(menuName = "SO/Events")]
+public class EventChannelSO : ScriptableObject
 {
-    [SerializeField] private EventChannelSO fullAttackSO;
-    public override void DOSkill()
-    {
-        GameObject fullAttackEffect=
-        PoolManager.Instance.GetObject("FullAttack",null,quaternion.identity,GameObject.FindWithTag("Player").transform);
-        fullAttackEffect.transform.localScale = new Vector3(0.125f, 0.125f, 0.125f);
-        fullAttackEffect.transform.localPosition = Vector3.zero;
-        
-        fullAttackSO.RaiseEvent();
-        DestroyEffect(fullAttackEffect).Forget();
-    }
+    public event UnityAction OnEventRaised;
 
-    private async UniTaskVoid DestroyEffect(GameObject effect)
+    public void RaiseEvent()
     {
-        await UniTask.Delay(TimeSpan.FromSeconds(2.0f));
-        PoolManager.Instance.ReturnObject("FullAttack",effect);
-        
+        OnEventRaised?.Invoke();
     }
 }
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Events;
+
+```
+
+```csharp
+
+public class FullAttackSkillSO : PlayerSkillSO
+{
+    [SerializeField]
+    private EventChannelSO fullAttackChannel;
+
+    public override void DOSkill()
+    {
+        // 전체 공격 이펙트 처리 생략
+        fullAttackChannel.RaiseEvent();
+    }
+}
+
+```
+각 필드 몬스터에 연결된 <code>EventChannelListener</code>는 이벤트를 구독하고 이벤트가 발생하면 등록된 <code>FullDamaged()</code>를 실행함.
+
+```csharp
 
 public class EventChannelListener : MonoBehaviour
 {
-    
-    [SerializeField] private EventChannelSO _eventChannel;
-    [SerializeField] private UnityEvent _response;
+    [SerializeField] private EventChannelSO eventChannel;
+    [SerializeField] private UnityEvent response;
 
     private void OnEnable()
     {
-        if (_eventChannel!= null)
-        {
-            _eventChannel.OnEventRaised += OnEventRaised;
-        }
+        if (eventChannel != null)
+            eventChannel.OnEventRaised += OnEventRaised;
     }
 
     private void OnDisable()
     {
-        if (_eventChannel!= null)
-        {
-            _eventChannel.OnEventRaised -= OnEventRaised;
-        }
+        if (eventChannel != null)
+            eventChannel.OnEventRaised -= OnEventRaised;
     }
 
-    public void OnEventRaised()
+    private void OnEventRaised()
     {
-        _response?.Invoke();
+        response?.Invoke();
     }
 }
 
-
-
 ```
 
-</details>
+이를 통해 전체 공격 스킬은 이벤트 발행만 담당하고 실제 피격 처리는 각 몬스터가 담당하도록 책임을 분리함.
+ 
+- 전체 공격 스킬과 개별 몬스터 사이의 직접 참조 제거
+- 신규 몬스터도 Listener 연결만으로 전체 공격 대상에 추가 가능
 
-스킬 중 전체 공격기는 SO기반 이벤트 버스 패턴을 적용하여 여러 시스템 간 결합도를 낮춤
-
-- `FullAttackSkillSO`는 스킬 사용시 직접적인 대상 제어 없이 이벤트만 발행
-- `EventChannelSO`를 이벤트 버스로 사용하여 로직간 직접 참조 제거
-- 각 몬스터 피격은 `EventChannelListener`를 통해 이벤트를 구독하고 독립적으로 반응
 
 </details>
 
